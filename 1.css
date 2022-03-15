@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;700&display=swap");
+
+*{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    outline:none;
+    text-decoration:none;
+    text-transform: capitalize; /* chuyển  chữ cái đầu mỗi từ thành chữ hoa */
+    font-family: "Nunito", sans-serif;
+}
+
+.container .currey-toggler{
+    display: flex;
+    align-items:center;
+    background: #fff;
+    border-radius: 5px;
+    margin: 15px 0;
+    padding: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+.container .currey-toggler span{
+    font-weight: bolder;
+    color: #666;
+    font-size: 20px;
+}
+.container .currey-toggler .toggler{
+    height: 50px;
+    width: 150px;
+    background:#2980b9;
+    border-radius:50px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    margin:0 10px;
+    position: relative;
+    cursor:pointer;
+}
+.container .currey-toggler .toggler::before{
+    content: "";
+    position: absolute;
+    top: 5px;left:7px;
+    width: 40px;
+    height:40px;
+    border-radius: 50%;
+    background:#fff;
+    transition: 0.2s ease-out;
+}
+.container .currey-toggler .toggler.active::before{
+    left:calc(100% - 47px)
+}
+
+
+
+
+
+
+.container{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 7%;
+    background: linear-gradient(90deg, #2980b9 50%, #eee 50.1%);
+    min-height: 100vh;
+}
+.container .product-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:15px;
+}
+.container .product-container .product{
+    flex:300px;
+    padding: 20px;
+    background:#fff;
+    box-shadow:0 5px 15px rgba(0, 0, 0, 0.3);;
+    text-align: center;
+    border-radius: 5px;
+    outline-offset: -10px;
+    outline: 1.3px solid rgba(0,0,0,.1);
+    transition:.5s ease;
+}
+.container .product-container .product:hover{
+    outline: 2px solid black;
+    outline-offset: 0px;
+    
+}
+.container .product-container .product img{
+    height:200px;
+    transition: .7s ease-in-out;
+}
+.container .product-container .product img:hover{
+    transform: scale(1.1);
+}
+.container .product-container .product h3{
+    font-size:25px;
+    color:#666;
+    font-weight: bolder;
+}
+.container .product-container .product .amount {
+    padding: 10px 0;
+    color: #2980b9;
+    font-weight: bolder;
+}
+.container .product-container .product .amount .dollar{
+    font-size: 20px;
+}
+.container .product-container .product .amount .price{
+    font-size: 35px;
+}
+.container .product-container .product .btn{
+
+    display:inline-block;
+    background: #333;
+    border-radius:50px;
+    font-size: 17px;
+    padding:8px 50px;
+    color:#fff;
+    font-weight: bolder;
+    margin: 8px 0;
+    transition: .5s ease-in-out;
+}
+.container .product-container .product .btn:hover{
+    letter-spacing: 2px;
+    opacity: 0.8;
+    color: orange;
+}
